@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-08-20T16:55:13" hostname="DESKTOP-UD4BENK" time="0.303">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-08-20T17:02:16" hostname="DESKTOP-UD4BENK" time="0.348">
   <properties/>
-  <testcase name="givenEmployeePayrollInDB_WhenRetrieved_ShouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.303">
-    <failure message="java.lang.AssertionError: expected:&lt;4&gt; but was:&lt;7&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;4&gt; but was:&lt;7&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at com.bridgelabz.EmployeePayrollServiceTest.givenEmployeePayrollInDB_WhenRetrieved_ShouldMatchEmployeeCount(EmployeePayrollServiceTest.java:16)
+  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.348">
+    <failure message="java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.bridgelabz.EmployeePayrollService.checkEmployeePayrollInSyncWithDB(EmployeePayrollService.java:49)
+	at com.bridgelabz.EmployeePayrollServiceTest.givenNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDB(EmployeePayrollServiceTest.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -16,6 +18,7 @@
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
@@ -61,7 +64,11 @@
 </failure>
   </testcase>
   <system-out><![CDATA[Connecting to database: jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful! com.mysql.cj.jdbc.ConnectionImpl@2024ca80
+Connection is successful! com.mysql.cj.jdbc.ConnectionImpl@17d54f38
+Connecting to database: jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is successful! com.mysql.cj.jdbc.ConnectionImpl@1829323d
+Connecting to database: jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is successful! com.mysql.cj.jdbc.ConnectionImpl@5fffd09f
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
